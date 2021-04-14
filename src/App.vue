@@ -1,30 +1,63 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <transition name="slide">
+    <router-view />
+  </transition>
 </template>
 
-<style>
+<style lang="scss">
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
+  display: flex;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  height: 100%;
+  flex: 1;
 }
 
-#nav {
-  padding: 30px;
+.slide-enter-active {
+  transition: all 0.5s ease-out;
+}
+.slide-leave-active {
+  transition: all 0.5s ease-out;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.slide-enter-from {
+  position: absolute;
+  left: 100%;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.slide-enter-to {
+  position: absolute;
+  left: 0;
+}
+
+.slide-leave-from {
+  position: absolute;
+  left: -100%;
+  opacity: 0;
+}
+
+.slide-leave-to {
+  position: absolute;
+  left: 0;
+  opacity: 1;
 }
 </style>
