@@ -21,8 +21,8 @@ export default {
 
 <style lang="scss" scoped>
 .left-panel {
-  position: relative;
-  width: 350px;
+  position: fixed;
+  width: 222px;
   background: black;
   height: 100%;
   display: flex;
@@ -58,7 +58,7 @@ export default {
   transform: rotate(-90deg);
   position: absolute;
   bottom: 160px;
-  right: -111.3px;
+  right: -109.3px;
 }
 
 .arrow {

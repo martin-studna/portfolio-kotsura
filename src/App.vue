@@ -5,17 +5,19 @@
 </template>
 
 <style lang="scss">
-html,
 body {
-  padding: 0;
   margin: 0;
-  width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   background-color: black;
+  display: flex;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow-x: hidden;
-  display: flex;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 a {
@@ -28,7 +30,7 @@ a {
 }
 
 #app {
-  height: 100%;
+  width: 100%;
   flex: 1;
 }
 

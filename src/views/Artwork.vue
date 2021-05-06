@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="artwork">
     <LeftPanel />
     <div class="container">
       <div class="content">
@@ -197,6 +197,11 @@
           </div>
         </div>
       </div>
+      <footer class="footer">
+        <a href="/design">
+          <h5 style="margin-bottom: 0; margin-top: 0">DESIGN</h5>
+        </a>
+      </footer>
     </div>
   </div>
 </template>
@@ -212,17 +217,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.about {
-  width: 100%;
-  height: 100%;
+.artwork {
   background: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .container {
   display: flex;
   justify-content: flex-end;
+  margin-left: 222px;
+  position: relative;
 }
 
 .content {
@@ -240,16 +245,16 @@ export default {
 }
 
 .header {
-  position: relative;
   height: 200px;
   width: 100%;
+  margin-left: 500px;
   font-weight: 800;
   color: $primary;
   font-family: Montserrat;
 
   &-title {
     position: absolute;
-    left: 0;
+    right: 0;
     top: $header-top-align;
     font-size: $header-font-size;
   }
@@ -289,5 +294,46 @@ hr {
   margin-bottom: 80px;
   background: #b6b6b6;
   width: 250px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer h5 {
+  font-family: Montserrat;
+  margin-right: 150px;
+  font-size: 3.5em;
+  font-weight: 800;
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
+}
+
+.footer h5:hover {
+  transform: translate(60px, 0);
+  font-style: italic;
+  color: $primary;
+}
+
+@media only screen and (max-width: 1440px) {
+  .header-title {
+    font-size: 10em;
+    top: -40px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-title {
+    font-size: 7em;
+    top: -27px;
+  }
 }
 </style>

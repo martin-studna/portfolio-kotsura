@@ -1,7 +1,26 @@
 <template>
   <div class="container">
     <main class="main">
-      <div style="flex: 1" />
+      <div
+        style="
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+        class="home-video"
+      >
+        <iframe
+          class="home-video"
+          width="840"
+          height="478"
+          src="https://www.youtube.com/embed/VRxG9tCHMqI"
+          title="YouTube video player"
+          frameborder="0"
+          style="border: none"
+          allowfullscreen
+        ></iframe>
+      </div>
       <div style="height: 100%; width: 2px; background-color: white" />
       <div style="flex: 1; color: white; font-family: Montserrat">
         <div style="margin-left: 30px">
@@ -88,12 +107,62 @@ export default {
     font-style: italic;
     text-shadow: none;
     color: white;
-    font-weight: 100;
     transform: translate(30px, 0);
   }
 }
 
+.blue {
+  font-weight: 200;
+}
+
 .blue:hover {
   color: $primary;
+}
+
+.home-video {
+  -webkit-animation: fadein 4s ease-in 10s forwards; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 4s ease-in 10s forwards; /* Firefox < 16 */
+  -ms-animation: fadein 4s ease-in 10s forwards; /* Internet Explorer */
+  -o-animation: fadein 4s ease-in 10s forwards; /* Opera < 12.1 */
+  animation: fadein 4s ease-in 10s forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>

@@ -11,8 +11,8 @@
           <img src="../assets/jay_card.png" alt="" class="card" />
         </div>
         <div class="content-right">
-          <div>
-            <ul class="links">
+          <div style="width: 80%">
+            <ul class="outline-text links">
               <li class="link">
                 <a href="">linkedin</a>
               </li>
@@ -62,12 +62,14 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin-left: 222px;
 }
 
 .content-body {
   width: 100%;
   height: 100%;
   display: flex;
+  margin-top: 15px;
   flex-direction: row;
 }
 
@@ -80,24 +82,35 @@ export default {
 }
 
 .content-right {
-  background: gray;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(182, 182, 182, 1) 100%
+  );
   width: 50%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
-
+.outline-text {
+  color: #000;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  --webkit-font-smoothing: antialiased;
+}
 .header {
   position: relative;
-  height: 250px;
+  height: 32rem;
   width: 100%;
   font-weight: 800;
   color: white;
   font-family: Montserrat;
   background: black;
-  box-shadow: 6px 6px 6px #b3b3b3;
-  font-size: 180px;
+  /* box-shadow: 6px 6px 6px #b3b3b3; */
+  font-size: 300px;
 
   &-title-1 {
     position: absolute;
@@ -106,8 +119,8 @@ export default {
   }
   &-title-2 {
     position: absolute;
-    left: 50%;
-    bottom: -45px;
+    left: 48%;
+    bottom: -75px;
   }
 }
 
@@ -121,22 +134,22 @@ export default {
 
 .links {
   list-style-type: none;
-  color: rgba(0, 0, 0, 0.5);
-
+  margin-right: 3rem;
   font-weight: 900;
-  font-size: 60px;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
-    1px 1px 0 #fff;
-  --webkit-font-smoothing: antialiased;
+  font-size: 100px;
+  text-align: center;
 }
 
 .link {
+  transition: transform 0.2s ease-in;
+  /* text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  --webkit-font-smoothing: antialiased; */
+  color: #fff;
 }
 
 .link:hover {
-  color: #fff;
-  text-shadow: none;
-  font-weight: 300;
   font-style: italic;
+  transform: translate(30px, 0);
 }
 </style>
