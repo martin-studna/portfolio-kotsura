@@ -2,10 +2,6 @@
 node_modules
 /dist
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a8cbc78bed5f866da5c2a97bd790bc5eae7f04fa
 # local env files
 .env.local
 .env.*.local

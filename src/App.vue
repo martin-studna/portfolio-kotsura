@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <transition name="slide">
     <router-view />
   </transition>
@@ -62,37 +61,5 @@ a {
   position: absolute;
   left: 0;
   opacity: 1;
-=======
-  <div id="app">
-    <NavigationBar/>
-    <Introduction/>
-  </div>
-</template>
-
-<script>
-import Introduction from './components/Introduction.vue';
-import NavigationBar from './components/NavigationBar.vue';
-
-export default {
-  name: 'App',
-  components: {
-    Introduction,
-    NavigationBar,
-  },
-};
-</script>
-
-<style>
-body {
-  padding: 0 10%;
-  margin: 0;
-  background: black;
-  color: white;
-}
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-
->>>>>>> a8cbc78bed5f866da5c2a97bd790bc5eae7f04fa
 }
 </style>
